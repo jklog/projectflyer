@@ -1,3 +1,26 @@
+// var gulp        = require('gulp'),
+//     elixir      = require('laravel-elixir'),
+//     plumber     = require('gulp-plumber');
+
+// gulp.task('default', function() {
+// });
+
+// gulp.task('watch', function() {
+//     gulp.watch('resources/**', ['default']);
+//     elixir(function(mix) {
+//         mix
+//         .sass('styles.scss', 'public/css')
+//         .scripts(null,
+//             'public/js/all.js',
+//             'resources/assets/js'
+//         )
+//         .version([
+//             'public/css/styles.css',
+//             'public/js/all.js'
+//         ])
+//     }).pipe(plumber());
+// });
+
 var elixir = require('laravel-elixir');
 
 /*
@@ -11,6 +34,14 @@ var elixir = require('laravel-elixir');
  |
  */
 
+elixir.config.sourcemaps = false;
+
 elixir(function(mix) {
     mix.sass('app.scss');
+
 });
+
+
+// console.log(elixir);
+
+
